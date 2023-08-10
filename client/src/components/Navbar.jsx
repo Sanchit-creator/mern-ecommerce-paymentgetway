@@ -9,6 +9,7 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import SearchIcon from '@mui/icons-material/Search';
 import { InputBase, alpha } from '@mui/material';
 import logo from '../images/logo.png'
+import { toast } from 'react-toastify';
 
 
 const Tool = styled(Toolbar)`
@@ -67,6 +68,7 @@ const Navbar = () => {
                 onClick={() => {
                     localStorage.clear();
                     navigate('/')
+                    toast.success('Logged Out')
                 }}
             >Logout</Button>}
           </Icons>

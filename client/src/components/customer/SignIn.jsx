@@ -50,9 +50,10 @@ export default function SignIn() {
       localStorage.setItem("id", response.id)
       if (localStorage.getItem('userInfo')) {
         navigate(`/home/${localStorage.getItem('id')}`)
-        toast('Login Succesfull')
+        toast.success('Login Succesfull')
+      }else{
+        toast.error('Error while Login')
       }
-      toast('Error while Login')
     } catch (error) {
       console.log(error);
     }

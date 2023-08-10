@@ -131,6 +131,7 @@ const DashBoard = () => {
           toast.success('Posted')
         } catch (error) {
           console.log(error);
+          toast.error('Not Posted!')
         }
       }
 
@@ -172,6 +173,7 @@ const DashBoard = () => {
         try {
             let result = await deleteUser({params, e});
             setResponse(result.data)
+            toast.success('Deleted!')
           } catch (error) {
             console.log(error);
           }

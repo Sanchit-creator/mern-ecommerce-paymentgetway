@@ -14,6 +14,8 @@ import Error from "./components/Error";
 import ErrorPage from "./components/ErrorPage";
 import Footer from "./components/Footer";
 import Payment from "./components/customer/Payment";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const user = localStorage.getItem('user')
@@ -38,6 +40,7 @@ function App() {
             </Routes>
             <Footer />
         </Router>
+        <ToastContainer />
     </div>
   );
 }

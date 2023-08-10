@@ -49,8 +49,10 @@ export default function ShopkeeperSignUp() {
       let res = await signUpShopkeeper(signup);
       if (res) {
         navigate('/business')
+        toast.success('Successfully Signed Up!')
+      }else{
+        toast.error('User Already Exist')
       }
-      toast.error('User Already Exist')
     } catch (error) {
       console.log(error);
     }

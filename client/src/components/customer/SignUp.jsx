@@ -48,9 +48,11 @@ export default function SignUp() {
     try {
       let res = await signUpUser(signup);
       if (res) {
+        toast.success('Successfuly Signed Up!')
         navigate('/')
+      }else{
+        toast.error('Signup Failed')
       }
-      toast.error('User Already Exist')
     } catch (error) {
       console.log(error);
     }

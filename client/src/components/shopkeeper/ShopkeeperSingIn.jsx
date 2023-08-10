@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Avatar, Button, Grid, TextField, Typography } from '@mui/material';
 import LockIcon from '@mui/icons-material/Lock';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { signInShopkeeper } from '../../Service/api';
 
@@ -50,10 +50,10 @@ export default function ShopkeeperSignIn() {
       localStorage.setItem("params", response.id)
       if (localStorage.getItem('userInfo')) {
         navigate(`/dashboard/${localStorage.getItem('params')}`)
-        toast('Login Succesfull')
+        toast.success('Login Succesfull')
       }
       else{
-        toast('Error while Login')
+        toast.error('Error while Login')
       }
     } catch (error) {
       console.log(error);

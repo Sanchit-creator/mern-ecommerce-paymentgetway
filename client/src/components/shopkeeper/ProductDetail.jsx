@@ -5,6 +5,7 @@ import { Box, Button, Grid, TextField, TextareaAutosize } from '@mui/material';
 import styled from '@emotion/styled';
 import Error from '../Error';
 import ErrorPage from '../ErrorPage';
+import { toast } from 'react-toastify';
 
 const Content = styled(Box)`
     display: flex;
@@ -53,6 +54,9 @@ const ProductDetail = () => {
           let res = await editProduct({paramsone, signup});
           if (res) {
             setInterviewData(res.data)
+            toast.success('Posted!')
+          }else{
+            toast.error('Error While posting')
           }
         } catch (error) {
           console.log(error);
