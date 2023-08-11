@@ -104,7 +104,7 @@ const Home = () => {
           filteredProducts && filteredProducts.map((data, key) => (
             <Card sx={{ maxWidth: 345 }} key={key}>
               <ImageContainer>
-                <Image component='img' src={`http://localhost:3000/${data.images[0]}`} />
+                <Image component='img' src={`https://ecommerce-backend-o61s.onrender.com/${data.images[0]}`} />
               </ImageContainer>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">

@@ -71,7 +71,7 @@ const Cart = () => {
     const {total_amount} = useCartContext();
 
     const submit = async (e) => {
-        const {data: {key}} = await axios.get("http://localhost:3000/api/getkey")
+        const {data: {key}} = await axios.get("https://ecommerce-backend-o61s.onrender.com/api/getkey")
         const res = await payment(e);
         console.log(res);
 
@@ -83,7 +83,7 @@ const Cart = () => {
             description: "Test Transaction",
             image: "https://example.com/your_logo",
             order_id: res.data.order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-            callback_url: "http://localhost:3000/api/user/paymentverification",
+            callback_url: "https://ecommerce-backend-o61s.onrender.com/api/user/paymentverification",
             prefill: {
                 name: "Gaurav Kumar",
                 email: "gaurav.kumar@example.com",

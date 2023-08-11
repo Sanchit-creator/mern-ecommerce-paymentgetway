@@ -1,5 +1,5 @@
 import axios from 'axios'
-const URL = 'http://localhost:3000'
+const URL = 'https://ecommerce-backend-o61s.onrender.com'
 
 export const signUpShopkeeper = async(data) => {
     try {

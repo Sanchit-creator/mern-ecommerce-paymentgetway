@@ -167,7 +167,7 @@ const ProductDetails = () => {
       <ImageSection>
         <LeftArrow onClick={goToPrevious}/>
         <RightArrow onClick={goToNext}/>
-        <MainImage component='img' src={`http://localhost:3000/${detail.images[currntIndex]}`}/>
+        <MainImage component='img' src={`https://ecommerce-backend-o61s.onrender.com/${detail.images[currntIndex]}`}/>
       </ImageSection>
       <Description>
         <DetailBox component="h1">{detail.name}</DetailBox>

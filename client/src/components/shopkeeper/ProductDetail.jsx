@@ -137,7 +137,7 @@ const ProductDetail = () => {
                     required
                     id="outlined-disabled"
                     label="Adhaar Photo One"
-                    src={`http://localhost:3000/${data}`}
+                    src={`https://ecommerce-backend-o61s.onrender.com/${data}`}
                 />
             ))
         }

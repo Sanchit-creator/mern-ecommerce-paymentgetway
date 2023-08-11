@@ -273,7 +273,7 @@ const DashBoard = () => {
             response ? response.map((data, key) => (
               <Main key={data._id}>
                   <InputBox>
-                      {data.images && <Thumbnail component='img' src={`http://localhost:3000/${data.images[0]}`} />}
+                      {data.images && <Thumbnail component='img' src={`https://ecommerce-backend-o61s.onrender.com/${data.images[0]}`} />}
                       <Typography>Name: {data.name}</Typography>
                   </InputBox>
                   <BtnSec>
