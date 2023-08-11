@@ -10,6 +10,7 @@ import { useCartContext } from '../context/productcontext';
 import SendIcon from '@mui/icons-material/Send';
 import Error from '../Error';
 import ErrorPage from '../ErrorPage';
+import { toast } from 'react-toastify';
 
 const MainSection = styled(Box)`
   width: 100wv;
@@ -126,6 +127,7 @@ const ProductDetails = () => {
       try {
         let res = await postReview({paramsthree, review});
         setDetail(res.data);
+        toast.success('Posted!')
       } catch (error) {
         console.log(error);
       }

@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
+import {HashRouter as Router, Routes, Route, Navigate} from "react-router-dom";
 import ShopkeeperSignIn from "./components/shopkeeper/ShopkeeperSingIn";
 import ShopkeeperSignUp from "./components/shopkeeper/ShopkeeperSignUp";
 import SignIn from "./components/customer/SignIn";
